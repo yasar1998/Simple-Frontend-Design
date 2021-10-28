@@ -1,0 +1,72 @@
+body {
+    background-image: linear-gradient(white, blue);
+    font-family: Open Sans;
+    font-size: 50px;
+    color: #222;
+}
+.hotels {
+    display: grid;
+    grid-template-columns: 400px 400px;
+    justify-content: center;
+    height: 1000px;
+}
+.hotel {
+    width: 80%;
+    height: 80%;
+}
+.card {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 0 40px 0 40px;
+    border: solid black;
+    transform-style: preserve-3d;
+    transition: all 600ms;
+}
+.more {
+    display: none;
+}
+.front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+.back {
+    position: absolute;
+    background: #222;
+    color: black;
+    width: 100%;
+    height: 100%;
+    transform: rotateX(180deg);
+    border-radius: 35px 0 35px 0;
+    backface-visibility: hidden;
+}
+.back h2 {
+    text-align: center;
+    color: skyblue;
+    font-size: 30px;
+    border: solid red;
+    border-radius: 35px 0 35px 0;
+}
+.back p {
+    text-align: center;
+    font-family: Open Sans;
+    font-size: 20px;
+    color: skyblue;
+    width: 100%;
+}
+.back .c1 {
+    margin-left: 0.5em;
+    font-style: italic;
+    text-align: left;
+    font-family: cursive;
+    font-size: 15px;
+    color: yellow;
+    width: 100%;
+}
+:checked + .card {
+    transform: rotateX(180deg);
+    box-shadow: 0 20px 20px rgba(255, 255, 255, .2);
+}
